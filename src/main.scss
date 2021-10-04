@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+}
+
+
+nav {
+  position: relative;
+  margin: auto;
+  padding: 15px;
+  height: 4vh;
+  box-shadow: rgb(138, 138, 138) 0px 1px 3px;
+}
+
+nav h1 {
+  position: absolute;
+  font-family: Ralewaybold;
+  top: 1vh;
+  font-size: 2vh;
+}
+
+nav h3 {
+  position: absolute;
+  right: 15px;
+  top: 1vh;
+  font-family: Ralewaybold;
+  font-size: 2vh;
+}
+
+form {
+  display: block;
+  font-size: 1.5vh;
+  margin: auto;
+  font-family: Ralewaybold;
+  width: 80vh;
+  padding: 1vh;
+  margin-top: 2vh;
+}
+
+
+form input {
+  display: block;
+  margin-top: 0.5vh;
+  margin-bottom: 2vh;
+  border-radius: 0.8vh;
+  border: 2px solid gray;
+  width: 50%;
+  height: 3vh;
+}
+
+form textarea {
+  display: block;
+  margin-top: 0.5vh;
+  border: 2px solid gray;
+  border-radius: 0.8vh;
+  width: 98.5%;
+}
+
+form button {
+  float: right;
+  font-weight: bold;
+  margin-top: 2vh;
+  width: 14vh;
+  height: 4vh;
+  font-family: Ralewaybold;
+  text-decoration: none;
+  background-color:mediumseagreen;
+  border-radius: 0.7vh;
+  font-size: 1.6vh;
+  color: white;
+}
+
+#grid-container {
+  font-family:Raleway;
+  padding: 1vh;
+  padding-top: 10vh;
+  margin: auto;
+  margin-top: 5vh;
+  width: 80vh;
+  display: grid;
+  grid-column-gap: 2.5vh;
+  grid-row-gap: 5vh;
+  grid-template-columns: 25vh 25vh 25vh;
+  grid-template-areas: "title title title"
+                       "todo-not-complete todo-not-complete todo-not-complete"
+                       "todo-not-complete todo-not-complete todo-not-complete";
+}
+
+#grid-container h1 {
+  font-family: Ralewaybold;
+  grid-area: title;
+  font-size: 2vh;
+}
+
+#grid-container button {
+  font-family: Ralewaybold;
+  position: relative;
+  display: block;
+  float: right;
+  width: 12vh;
+  margin-top: 2vh;
+  text-decoration: none;
+  background-color:mediumseagreen;
+  border-radius: 0.7vh;
+  height: 3vh;
+  font-size: 1.3vh;
+  color: white;
+}
+
+.grid-container h3 {
+  font-family: Ralewaybold;
+  font-size: 1.8vh;
+}
+
+#grid-container p {
+  font-size: 1.4vh;
+}
+
+#grid-container article {
+  height: auto;
+  width: auto;
+  padding-left: 1vh;
+  padding-right: 1vh;
+  padding-top: 2vh;
+  box-shadow: rgb(1, 217, 255) 0px 1px 3px;
+}
+
+.todo-complete {
+  visibility: hidden;
+  display: none;
+  background-color: red;
+}
+
+#todo-not-complete {
+  grid-area: todo-not-complete;
+}
+
