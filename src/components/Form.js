@@ -1,31 +1,31 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 const Form = (props) => {
-  const [todoTitle, setTitle] = useState('');
-  const [todoContent, setContent] = useState('');
+  const [todoTitle, setTitle] = useState('')
+  const [todoContent, setContent] = useState('')
 
   const handleTitleChange = (e) => {
-    setTitle(e.currentTarget.value);
-    console.log(todoTitle);
-  };
+    setTitle(e.currentTarget.value)
+    console.log(todoTitle)
+  }
 
   const handleContentChange = (e) => {
-    setContent(e.currentTarget.value);
-    console.log(todoContent);
-  };
+    setContent(e.currentTarget.value)
+    console.log(todoContent)
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     props.onSubmit({
       id: Math.floor(Math.random() * 1000000),
       title: todoTitle,
-      name: todoContent
-    });
+      name: todoContent,
+    })
 
-    setTitle('');
-    setContent('');
-  };
+    setTitle('')
+    setContent('')
+  }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -51,10 +51,10 @@ const Form = (props) => {
         id=""
         rows="5"
         value={todoContent}
-      ></textarea>
+      />
       <button type="submit">Add</button>
     </form>
-  );
-};
+  )
+}
 
-export default Form;
+export default Form

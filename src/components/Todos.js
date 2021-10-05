@@ -1,29 +1,26 @@
-import Todo from './Todo';
+import Todo from './Todo'
 
-const Todos = ({ todos }) => {
-  return todos.map((todo) => {
-    return (
-      <>
-        <Todo
-          key={todo.id}
-          id={todo.index}
-          todos={todos}
-          todo={todo}
-          title={todo.title}
-          description={todo.description}
-        />
-      </>
-    );
-  });
-};
+const Todos = ({ todos }) =>
+  todos.map((todo) => (
+    <>
+      <Todo
+        key={todo.id}
+        id={todo.index}
+        todos={todos}
+        todo={todo}
+        title={todo.title}
+        description={todo.description}
+      />
+    </>
+  ))
 
-export default Todos;
+export default Todos
 
-/*return (
+/* return (
        todos.map(todo => {
            return <Todo key = {todo.id} todo = {todo} />
        }) 
-    )*/
+    ) */
 
 /*  <>
       <section id="grid-container">
@@ -34,4 +31,4 @@ export default Todos;
           <button type="submit">Complete</button>
         </article>
       </section>
-    </>*/
+    </> */
